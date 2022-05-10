@@ -1,0 +1,109 @@
+/* line 1, sass/base/_reset.scss */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+/* line 3, sass/main.scss */
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: white;
+  background-image: url(https://images.pexels.com/photos/1629212/pexels-photo-1629212.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940); }
+
+/* line 14, sass/main.scss */
+h1 {
+  text-align: center;
+  color: darkslategrey; }
+
+/* line 18, sass/main.scss */
+.container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  padding: 30px; }
+
+/* line 27, sass/main.scss */
+.search {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; }
+
+/* line 32, sass/main.scss */
+form {
+  display: flex; }
+
+/* line 35, sass/main.scss */
+input {
+  padding: 15px 10px;
+  outline: none;
+  width: 400px; }
+
+/* line 40, sass/main.scss */
+.list-container {
+  background-color: white;
+  width: 100%;
+  color: darkslategray;
+  margin-top: 20px; }
+
+/* line 46, sass/main.scss */
+ul {
+  padding: 0; }
+
+/* line 49, sass/main.scss */
+li {
+  list-style: none;
+  background-color: lightgray;
+  border-radius: 10px;
+  margin-top: 15px;
+  display: flex; }
+
+/* line 56, sass/main.scss */
+li p {
+  margin: 0;
+  padding: 15px;
+  width: 100%; }
+
+/* line 61, sass/main.scss */
+.boton-borrar {
+  margin-left: auto;
+  border: none;
+  background-color: #e31746;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  outline: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 10%;
+  font-size: 1.2em; }
+
+/* line 74, sass/main.scss */
+.boton-borrar:hover {
+  cursor: pointer;
+  background-color: lightseagreen; }
+
+/* line 78, sass/main.scss */
+.boton-agregar {
+  padding: 5px 15px;
+  border: none;
+  color: white;
+  font-family: fantasy;
+  background-color: teal;
+  font-size: 1.4rem;
+  outline: none; }
+
+/* line 87, sass/main.scss */
+.boton-agregar:hover {
+  cursor: pointer;
+  background-color: darkcyan; }
+
+/* line 91, sass/main.scss */
+.vaciar {
+  color: darkslategrey; }
