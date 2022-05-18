@@ -18,9 +18,7 @@ while (run){
             crearTarea();
             break;
         case '4':
-            mostrarTareas();
-        case '5':
-            alert('');    
+            mostrarTareas();    
         case 'ESC':
             run=false;
             alert('')
@@ -29,10 +27,24 @@ while (run){
 }
 
 function mostrarTareas() {
-    alert(tareas);
+    let stringTasks = '';
+    tareas.forEach( (tarea, index) => {
+    stringTasks = stringTasks + '\n' + index + '-' + tarea.description + '\n'+ tarea.date;
+    });
+    alert(stringTasks);
 }
   
 function crearTarea() {
-    let nuevaTarea = prompt('Ingrese tarea a realizar: ');
-    tareas.push(nuevaTarea);
+    const newTask = {
+        date:'',
+        type:'',
+        description:'',
+        state:false,
+    }
+
+    newTask.description = prompt('Ingrese tarea a realizar: ');
+    newTask.date = prompt('Ingrese la fecha máxima de resolución: (dd/mm/yyyy)');
+    newTask.type = prompt('Ingrese si la tarea es tipo "hogar" u "oficina"');
+    
+    tareas.push(newTask);
 }
