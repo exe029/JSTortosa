@@ -11,52 +11,54 @@ body {
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
-  color: white;
   background-image: url(https://images.pexels.com/photos/1629212/pexels-photo-1629212.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940); }
 
-/* line 14, sass/main.scss */
+/* line 13, sass/main.scss */
 h1 {
   text-align: center;
   color: darkslategrey; }
 
-/* line 18, sass/main.scss */
+/* line 17, sass/main.scss */
 .container {
   margin-top: 30px;
   margin-bottom: 30px;
-  width: 30%;
+  width: 100%;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
   background-color: white;
+  border-radius: 3px;
   padding: 30px; }
 
-/* line 27, sass/main.scss */
+/* line 28, sass/main.scss */
 .search {
   margin-left: auto;
   margin-right: auto;
   width: 100%; }
 
-/* line 32, sass/main.scss */
+/* line 33, sass/main.scss */
 form {
-  display: flex; }
+  display: flex;
+  flex-direction: column; }
 
-/* line 35, sass/main.scss */
+/* line 38, sass/main.scss */
 input {
   padding: 15px 10px;
   outline: none;
   width: 400px; }
 
-/* line 40, sass/main.scss */
+/* line 43, sass/main.scss */
 .list-container {
   background-color: white;
   width: 100%;
   color: darkslategray;
   margin-top: 20px; }
 
-/* line 46, sass/main.scss */
+/* line 49, sass/main.scss */
 ul {
   padding: 0; }
 
-/* line 49, sass/main.scss */
+/* line 52, sass/main.scss */
 li {
   list-style: none;
   background-color: lightgray;
@@ -64,13 +66,13 @@ li {
   margin-top: 15px;
   display: flex; }
 
-/* line 56, sass/main.scss */
+/* line 59, sass/main.scss */
 li p {
   margin: 0;
   padding: 15px;
   width: 100%; }
 
-/* line 61, sass/main.scss */
+/* line 64, sass/main.scss */
 .boton-borrar {
   margin-left: auto;
   border: none;
@@ -84,26 +86,30 @@ li p {
   width: 10%;
   font-size: 1.2em; }
 
-/* line 74, sass/main.scss */
+/* line 77, sass/main.scss */
 .boton-borrar:hover {
   cursor: pointer;
   background-color: lightseagreen; }
 
-/* line 78, sass/main.scss */
+/* line 81, sass/main.scss */
 .boton-agregar {
   padding: 5px 15px;
   border: none;
+  border-radius: 3px;
   color: white;
+  width: 100%;
+  max-width: 360px;
+  margin: 20px auto;
   font-family: fantasy;
   background-color: teal;
   font-size: 1.4rem;
   outline: none; }
 
-/* line 87, sass/main.scss */
+/* line 94, sass/main.scss */
 .boton-agregar:hover {
   cursor: pointer;
   background-color: darkcyan; }
 
-/* line 91, sass/main.scss */
+/* line 98, sass/main.scss */
 .vaciar {
   color: darkslategrey; }

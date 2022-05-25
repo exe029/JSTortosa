@@ -11,14 +11,28 @@
     <div class="container">
         <h1>lista de tareas</h1>
         <div class="search">
-            <form>
-                <input type="text" placeholder="Agregar Tarea">
-                <button class="boton-agregar">Agregar</button>
-                <button class="boton-borrar">Borrar</button>
+            <form action="">
+                <div class="form-control">
+                    <label>Fecha: </label>
+                    <input type="date" id="date">
+                </div>
+                <div class="form-control">
+                    <label>Descripción: </label>
+                    <input type="text" placeholder="Agregar Tarea" id="description">
+                </div>
+                <div class="form-control">
+                    <label>Tipo de tarea: </label>
+                    <select id="type">
+                        <option  value="" disabled selected>select</option>
+                        <option  value="hogar">Hogar</option>
+                        <option value="trabajo">Trabajo</option>
+                    </select>
+                </div>
+                <button class="boton-agregar" id="add-button">Agregar</button>
             </form>
         </div>
         <div class="list-container">
-            <ul>
+            <ul id="list-tasks">
 
             </ul>
         </div>
@@ -29,7 +43,7 @@
     </div>
 
 
-
-    <script src="./script.js"></script>
+    <script src="./js/index.js"></script> 
+    <!-- <script src="./js/script.js"></script> -->
 </body>
 </html>
