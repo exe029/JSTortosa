@@ -13,6 +13,11 @@ const description = document.getElementById('description');
 const type = document.getElementById('type');
 const addButton = document.getElementById('add-button')
 const tasksContainer = document.getElementById('list-tasks');
+const vaciar = document.querySelector(".vaciar");
+
+
+
+
 
 //funciones
 const clearFields = () => {
@@ -25,6 +30,7 @@ const clearFields = () => {
     newTarea.type="";
 }
 
+
 const printTasks = () => {
 
     tareas.forEach( tarea =>{
@@ -35,13 +41,16 @@ const printTasks = () => {
             <span class="card__date">${tarea.date}</span>
             <span class="card__state">${tarea.state}</span>
             <span class="card__type">${tarea.type}</span>
+            <button class="button-delete">X</button>
         `;
 
         tasksContainer.appendChild(newTaskCard);
+        vaciar.style.display = "none";
+        
+
     });
 
 }
-
 
 //eventos
 date.addEventListener('input', (e)=>{
@@ -67,9 +76,12 @@ addButton.addEventListener('click', (e)=>{
     tareas.push(newTarea);
     printTasks();
     clearFields();
+    onmousemove();
+    
     
 
 });
+
 
 
 

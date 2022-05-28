@@ -1,0 +1,24 @@
+.search {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+
+  }
+
+  .form-control {
+    margin-top: 10px;
+  }
+
+  #date {
+    width: 70%;
+  }
+  #description {
+    width: 70%;
+  }

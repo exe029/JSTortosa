@@ -1,4 +1,6 @@
 @import './base/reset';
+@import './components/form.scss';
+@import './components/buttons.scss';
 
 body {
     
@@ -25,58 +27,19 @@ body {
     border-radius: 3px;
     padding: 30px;
   }
-  .search {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-
-  }
-  input {
-    padding: 15px 10px;
-    outline: none;
-    width: 400px;
-  }
-  .list-container {
-    background-color: white;
-    width: 100%;
-    color: darkslategray;
-    margin-top: 20px;
-  }
-  ul {
-    padding: 0;
-  }
-  li {
-    list-style: none;
-    background-color: lightgray;
-    border-radius: 10px;
-    margin-top: 15px;
-    display: flex;
-  }
-  li p {
-    margin: 0;
-    padding: 15px;
-    width: 100%;
-  }
-  .boton-borrar {
-    margin-left: auto;
+  .button-delete {
+    
     border: none;
     background-color: #e31746;
-    color: white;
+    color: rgb(12, 3, 3);
     font-weight: bold;
     padding: 5px 10px;
     outline: none;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    width: 10%;
     font-size: 1.2em;
   }
-  .boton-borrar:hover {
+  .button-delete:hover {
     cursor: pointer;
-    background-color: lightseagreen;
+    background-color: rgb(9, 32, 109);
   }
   .boton-agregar {
     padding: 5px 15px;
@@ -95,9 +58,50 @@ body {
     cursor: pointer;
     background-color: darkcyan;
   }
+  
+
+  input {
+    padding: 15px 10px;
+    outline: none;
+    width: 400px;
+  }
+  .list-container {
+    background-color: white;
+    width: 100%;
+    color: darkslategray;
+    margin-top: 20px;
+  }
+  ul {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 20px;
+  }
+  li {
+    width: 30%;
+    list-style: none;
+    background-color: lightgray;
+    border-radius: 10px;
+    margin-top: 15px;
+    display: flex;
+  }
+  li p {
+    margin: 0;
+    padding: 15px;
+    width: 100%;
+  }
+  
   .vaciar {
     color: darkslategrey;
   }
 
+  .card-container{
 
-
+    display: grid;
+    width: 150px;
+    height: 150px;
+    background-color: #16b072;
+    margin: 0 20px 20px 0;
+    text-align: center;
+    color: #ffffff;
+    user-select: none;
+  }
