@@ -138,3 +138,5 @@ function getTareasRealizadas() {
 function getPorcentaje(total, part) {
   return (part * 100) / total;
 }
+
+<span class="card__state">${newTarea.state}</span>

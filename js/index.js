@@ -29,9 +29,24 @@ const clearFields = () => {
     newTarea.date="";
     newTarea.type="";
 }
-
-
 const printTasks = () => {
+    newTaskCard = document.createElement('li');
+    newTaskCard.classList.add('card-container'); //<li class="card-container"></li>
+    newTaskCard.innerHTML = `
+        <h3>${newTarea.description}</h3>
+        <span class="card__date">${newTarea.date}</span>
+        
+        <span class="card__type">${newTarea.type}</span>
+        <button class="button-delete">X</button>
+    `
+    console.log (tareas);
+
+
+    tasksContainer.appendChild(newTaskCard);
+    vaciar.style.display = "none";
+}
+
+/*const printTasks = () => {
 
     tareas.forEach( tarea =>{
         newTaskCard = document.createElement('li');
@@ -50,7 +65,7 @@ const printTasks = () => {
 
     });
 
-}
+}*/
 
 //eventos
 date.addEventListener('input', (e)=>{
