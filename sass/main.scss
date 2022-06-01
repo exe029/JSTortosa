@@ -1,6 +1,7 @@
 @import './base/reset';
 @import './components/form.scss';
 @import './components/buttons.scss';
+@import './components/task';
 
 body {
     
@@ -27,37 +28,7 @@ body {
     border-radius: 3px;
     padding: 30px;
   }
-  .button-delete {
-    
-    border: none;
-    background-color: #e31746;
-    color: rgb(12, 3, 3);
-    font-weight: bold;
-    padding: 5px 10px;
-    outline: none;
-    font-size: 1.2em;
-  }
-  .button-delete:hover {
-    cursor: pointer;
-    background-color: rgb(9, 32, 109);
-  }
-  .boton-agregar {
-    padding: 5px 15px;
-    border: none;
-    border-radius: 3px;
-    color: white;
-    width: 100%;
-    max-width: 360px;
-    margin:20px auto;
-    font-family: fantasy;
-    background-color: teal;
-    font-size: 1.4rem;
-    outline: none;
-  }
-  .boton-agregar:hover {
-    cursor: pointer;
-    background-color: darkcyan;
-  }
+
   
 
   input {
@@ -99,9 +70,10 @@ body {
     display: grid;
     width: 150px;
     height: 150px;
-    background-color: #16b072;
+    background: linear-gradient(to bottom right, rgba(30, 92, 193, 0.51), rgb(56, 104, 181));
     margin: 0 20px 20px 0;
     text-align: center;
     color: #ffffff;
     user-select: none;
+    border-radius: 20px;
   }

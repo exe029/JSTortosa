@@ -4,6 +4,12 @@
   margin: 0;
   padding: 0; }
 
+/* line 7, sass/base/_reset.scss */
+button {
+  border: none;
+  background: none;
+  cursor: pointer; }
+
 /* line 1, sass/components/form.scss */
 .search {
   margin-left: auto;
@@ -29,26 +35,11 @@ form {
 #description {
   width: 70%; }
 
-/* line 1, sass/components/buttons.scss */
-.button-delete {
-  border: none;
-  background-color: #e31746;
-  color: #0c0303;
-  font-weight: bold;
-  padding: 5px 10px;
-  outline: none;
-  font-size: 1.2em; }
-
-/* line 11, sass/components/buttons.scss */
-.button-delete:hover {
-  cursor: pointer;
-  background-color: #09206d; }
-
-/* line 15, sass/components/buttons.scss */
+/* line 27, sass/components/form.scss */
 .boton-agregar {
   padding: 5px 15px;
   border: none;
-  border-radius: 3px;
+  border-radius: 10px;
   color: white;
   width: 100%;
   max-width: 360px;
@@ -58,12 +49,42 @@ form {
   font-size: 1.4rem;
   outline: none; }
 
-/* line 28, sass/components/buttons.scss */
+/* line 40, sass/components/form.scss */
 .boton-agregar:hover {
   cursor: pointer;
   background-color: darkcyan; }
 
-/* line 5, sass/main.scss */
+/* line 1, sass/components/_task.scss */
+.button-delete {
+  border: none;
+  background-color: #DC2626;
+  color: #0c0303;
+  font-weight: bold;
+  padding: 5px 14px;
+  height: 30px;
+  width: 30px;
+  outline: none;
+  border-radius: 5px;
+  background-image: url("../../assets/icons/delete_icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px; }
+  /* line 17, sass/components/_task.scss */
+  .button-delete:hover {
+    cursor: pointer;
+    background-color: #EF4444; }
+
+/* line 24, sass/components/_task.scss */
+.check-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #E5E7EB;
+  border-radius: 3px;
+  height: 30px;
+  width: 30px; }
+
+/* line 6, sass/main.scss */
 body {
   margin: 0;
   padding: 0;
@@ -72,12 +93,12 @@ body {
   line-height: 1.5;
   background-image: url(https://images.pexels.com/photos/1629212/pexels-photo-1629212.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940); }
 
-/* line 15, sass/main.scss */
+/* line 16, sass/main.scss */
 h1 {
   text-align: center;
   color: darkslategrey; }
 
-/* line 19, sass/main.scss */
+/* line 20, sass/main.scss */
 .container {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -89,60 +110,26 @@ h1 {
   border-radius: 3px;
   padding: 30px; }
 
-/* line 30, sass/main.scss */
-.button-delete {
-  border: none;
-  background-color: #e31746;
-  color: #0c0303;
-  font-weight: bold;
-  padding: 5px 10px;
-  outline: none;
-  font-size: 1.2em; }
-
-/* line 40, sass/main.scss */
-.button-delete:hover {
-  cursor: pointer;
-  background-color: #09206d; }
-
-/* line 44, sass/main.scss */
-.boton-agregar {
-  padding: 5px 15px;
-  border: none;
-  border-radius: 3px;
-  color: white;
-  width: 100%;
-  max-width: 360px;
-  margin: 20px auto;
-  font-family: fantasy;
-  background-color: teal;
-  font-size: 1.4rem;
-  outline: none; }
-
-/* line 57, sass/main.scss */
-.boton-agregar:hover {
-  cursor: pointer;
-  background-color: darkcyan; }
-
-/* line 63, sass/main.scss */
+/* line 34, sass/main.scss */
 input {
   padding: 15px 10px;
   outline: none;
   width: 400px; }
 
-/* line 68, sass/main.scss */
+/* line 39, sass/main.scss */
 .list-container {
   background-color: white;
   width: 100%;
   color: darkslategray;
   margin-top: 20px; }
 
-/* line 74, sass/main.scss */
+/* line 45, sass/main.scss */
 ul {
   display: flex;
   flex-wrap: nowrap;
   padding: 20px; }
 
-/* line 79, sass/main.scss */
+/* line 50, sass/main.scss */
 li {
   width: 30%;
   list-style: none;
@@ -151,23 +138,24 @@ li {
   margin-top: 15px;
   display: flex; }
 
-/* line 87, sass/main.scss */
+/* line 58, sass/main.scss */
 li p {
   margin: 0;
   padding: 15px;
   width: 100%; }
 
-/* line 93, sass/main.scss */
+/* line 64, sass/main.scss */
 .vaciar {
   color: darkslategrey; }
 
-/* line 97, sass/main.scss */
+/* line 68, sass/main.scss */
 .card-container {
   display: grid;
   width: 150px;
   height: 150px;
-  background-color: #16b072;
+  background: linear-gradient(to bottom right, rgba(30, 92, 193, 0.51), #3868b5);
   margin: 0 20px 20px 0;
   text-align: center;
   color: #ffffff;
-  user-select: none; }
+  user-select: none;
+  border-radius: 20px; }
