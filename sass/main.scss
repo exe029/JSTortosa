@@ -1,7 +1,8 @@
 @import './base/reset';
 @import './components/form.scss';
-@import './components/buttons.scss';
 @import './components/task';
+@import './components/nav.scss';
+
 
 body {
     
@@ -47,14 +48,7 @@ body {
     flex-wrap: nowrap;
     padding: 20px;
   }
-  li {
-    width: 30%;
-    list-style: none;
-    background-color: lightgray;
-    border-radius: 10px;
-    margin-top: 15px;
-    display: flex;
-  }
+ 
   li p {
     margin: 0;
     padding: 15px;

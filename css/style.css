@@ -10,6 +10,10 @@ button {
   background: none;
   cursor: pointer; }
 
+/* line 13, sass/base/_reset.scss */
+li {
+  list-style: none; }
+
 /* line 1, sass/components/form.scss */
 .search {
   margin-left: auto;
@@ -84,7 +88,59 @@ form {
   height: 30px;
   width: 30px; }
 
-/* line 6, sass/main.scss */
+/* line 1, sass/components/nav.scss */
+#menuNav {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background: white;
+  left: -200px;
+  transition: all 500ms linear; }
+
+/* line 10, sass/components/nav.scss */
+#menuNav.active {
+  left: 0px; }
+
+/* line 13, sass/components/nav.scss */
+.ul-container {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center; }
+
+/* line 21, sass/components/nav.scss */
+.li-container {
+  width: 50%;
+  list-style: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  display: flex; }
+
+/* line 29, sass/components/nav.scss */
+.logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 70%;
+  display: block;
+  margin: 0 auto; }
+
+/* line 36, sass/components/nav.scss */
+#menuNav .menu-btn {
+  position: absolute;
+  left: 230px;
+  top: 20px;
+  cursor: pointer; }
+
+/* line 43, sass/components/nav.scss */
+#menuNav .menu-btn span {
+  color: white;
+  display: block;
+  width: 40px;
+  text-align: center;
+  font-size: 25px; }
+
+/* line 7, sass/main.scss */
 body {
   margin: 0;
   padding: 0;
@@ -93,12 +149,12 @@ body {
   line-height: 1.5;
   background-image: url(https://images.pexels.com/photos/1629212/pexels-photo-1629212.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940); }
 
-/* line 16, sass/main.scss */
+/* line 17, sass/main.scss */
 h1 {
   text-align: center;
   color: darkslategrey; }
 
-/* line 20, sass/main.scss */
+/* line 21, sass/main.scss */
 .container {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -110,45 +166,36 @@ h1 {
   border-radius: 3px;
   padding: 30px; }
 
-/* line 34, sass/main.scss */
+/* line 35, sass/main.scss */
 input {
   padding: 15px 10px;
   outline: none;
   width: 400px; }
 
-/* line 39, sass/main.scss */
+/* line 40, sass/main.scss */
 .list-container {
   background-color: white;
   width: 100%;
   color: darkslategray;
   margin-top: 20px; }
 
-/* line 45, sass/main.scss */
+/* line 46, sass/main.scss */
 ul {
   display: flex;
   flex-wrap: nowrap;
   padding: 20px; }
 
-/* line 50, sass/main.scss */
-li {
-  width: 30%;
-  list-style: none;
-  background-color: lightgray;
-  border-radius: 10px;
-  margin-top: 15px;
-  display: flex; }
-
-/* line 58, sass/main.scss */
+/* line 52, sass/main.scss */
 li p {
   margin: 0;
   padding: 15px;
   width: 100%; }
 
-/* line 64, sass/main.scss */
+/* line 58, sass/main.scss */
 .vaciar {
   color: darkslategrey; }
 
-/* line 68, sass/main.scss */
+/* line 62, sass/main.scss */
 .card-container {
   display: grid;
   width: 150px;
@@ -158,4 +205,12 @@ li p {
   text-align: center;
   color: #ffffff;
   user-select: none;
-  border-radius: 20px; }
+  border-radius: 20px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center; }
+
+.list{
+  color: #1c116e;
+}

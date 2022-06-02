@@ -140,3 +140,33 @@ function getPorcentaje(total, part) {
 }
 
 <span class="card__state">${newTarea.state}</span>
+
+
+/*tipos de eventos
+
+ - click ( cuando se hacer clic sobre ese elemento )
+ - input ( cuando hay un cambio en un input )
+ - keydown ( cuando alguien presiona una teclado )
+
+*/
+
+/*const printTasks = () => {
+
+    tareas.forEach( tarea =>{
+        newTaskCard = document.createElement('li');
+        newTaskCard.classList.add('card-container'); //<li class="card-container"></li>
+        newTaskCard.innerHTML = `
+            <h3>${tarea.description}</h3>
+            <span class="card__date">${tarea.date}</span>
+            <span class="card__state">${tarea.state}</span>
+            <span class="card__type">${tarea.type}</span>
+            <button class="button-delete">X</button>
+        `;
+
+        tasksContainer.appendChild(newTaskCard);
+        vaciar.style.display = "none";
+        
+
+    });
+
+}*/
