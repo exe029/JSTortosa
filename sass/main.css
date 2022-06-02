@@ -1,45 +1,52 @@
-/* line 1, sass/base/_reset.scss */
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
-/* line 7, sass/base/_reset.scss */
 button {
   border: none;
   background: none;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
-/* line 13, sass/base/_reset.scss */
 li {
-  list-style: none; }
+  list-style: none;
+}
 
-/* line 1, sass/components/form.scss */
 .search {
   margin-left: auto;
   margin-right: auto;
-  width: 100%; }
+  width: 100%;
+}
 
-/* line 7, sass/components/form.scss */
 form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center; }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
 
-/* line 15, sass/components/form.scss */
 .form-control {
-  margin-top: 10px; }
+  margin-top: 10px;
+}
 
-/* line 19, sass/components/form.scss */
 #date {
-  width: 70%; }
+  width: 70%;
+}
 
-/* line 22, sass/components/form.scss */
 #description {
-  width: 70%; }
+  width: 70%;
+}
 
-/* line 27, sass/components/form.scss */
 .boton-agregar {
   padding: 5px 15px;
   border: none;
@@ -51,14 +58,14 @@ form {
   font-family: fantasy;
   background-color: teal;
   font-size: 1.4rem;
-  outline: none; }
+  outline: none;
+}
 
-/* line 40, sass/components/form.scss */
 .boton-agregar:hover {
   cursor: pointer;
-  background-color: darkcyan; }
+  background-color: darkcyan;
+}
 
-/* line 1, sass/components/_task.scss */
 .button-delete {
   border: none;
   background-color: #DC2626;
@@ -72,89 +79,107 @@ form {
   background-image: url("../../assets/icons/delete_icon.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 24px; }
-  /* line 17, sass/components/_task.scss */
-  .button-delete:hover {
-    cursor: pointer;
-    background-color: #EF4444; }
+  background-size: 24px;
+}
 
-/* line 24, sass/components/_task.scss */
+.button-delete:hover {
+  cursor: pointer;
+  background-color: #EF4444;
+}
+
 .check-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #E5E7EB;
   border-radius: 3px;
   height: 30px;
-  width: 30px; }
+  width: 30px;
+}
 
-/* line 1, sass/components/nav.scss */
 #menuNav {
   position: fixed;
   width: 200px;
   height: 100%;
   background: white;
   left: -200px;
-  transition: all 500ms linear; }
+  -webkit-transition: all 500ms linear;
+  transition: all 500ms linear;
+}
 
-/* line 10, sass/components/nav.scss */
 #menuNav.active {
-  left: 0px; }
+  left: 0px;
+}
 
-/* line 13, sass/components/nav.scss */
 .ul-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   padding: 20px;
-  flex-direction: column;
-  align-items: center; }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
-/* line 21, sass/components/nav.scss */
 .li-container {
   width: 50%;
   list-style: none;
   border-radius: 5px;
   margin-top: 15px;
-  display: flex; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 
-/* line 29, sass/components/nav.scss */
 .logo {
   width: 45px;
   height: 45px;
   border-radius: 70%;
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
-/* line 36, sass/components/nav.scss */
 #menuNav .menu-btn {
   position: absolute;
   left: 230px;
   top: 20px;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
-/* line 43, sass/components/nav.scss */
 #menuNav .menu-btn span {
   color: white;
   display: block;
   width: 40px;
   text-align: center;
-  font-size: 25px; }
+  font-size: 25px;
+}
 
-/* line 6, sass/main.scss */
 body {
   margin: 0;
   padding: 0;
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
-  background-image: url(https://images.pexels.com/photos/1629212/pexels-photo-1629212.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940); }
+  background-image: url(https://images.pexels.com/photos/1629212/pexels-photo-1629212.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
 
-/* line 16, sass/main.scss */
 h1 {
   text-align: center;
-  color: darkslategrey; }
+  color: darkslategrey;
+}
 
-/* line 20, sass/main.scss */
 .container {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -164,46 +189,55 @@ h1 {
   margin-right: auto;
   background-color: white;
   border-radius: 3px;
-  padding: 30px; }
+  padding: 30px;
+}
 
-/* line 34, sass/main.scss */
 input {
   padding: 15px 10px;
   outline: none;
-  width: 400px; }
+  width: 400px;
+}
 
-/* line 39, sass/main.scss */
 .list-container {
   background-color: white;
   width: 100%;
   color: darkslategray;
-  margin-top: 20px; }
+  margin-top: 20px;
+}
 
-/* line 45, sass/main.scss */
 ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: nowrap;
-  padding: 20px; }
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding: 20px;
+}
 
-/* line 51, sass/main.scss */
 li p {
   margin: 0;
   padding: 15px;
-  width: 100%; }
+  width: 100%;
+}
 
-/* line 57, sass/main.scss */
 .vaciar {
-  color: darkslategrey; }
+  color: darkslategrey;
+}
 
-/* line 61, sass/main.scss */
 .card-container {
+  display: -ms-grid;
   display: grid;
   width: 150px;
   height: 150px;
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(30, 92, 193, 0.51)), to(#3868b5));
   background: linear-gradient(to bottom right, rgba(30, 92, 193, 0.51), #3868b5);
   margin: 0 20px 20px 0;
   text-align: center;
   color: #ffffff;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   border-radius: 20px;
-  justify-items: center; }
+}
+/*# sourceMappingURL=main.css.map */
