@@ -48,6 +48,7 @@ const deleteTaskById = (e) =>{
 }
 
 const printTasks = (newTarea) => {
+    if (date.value != "" && type.value != "" && description.value != ""){
     newTaskCard = document.createElement('li');
     newTaskCard.classList.add('card-container'); //<li class="card-container"></li>
     newTaskCard.innerHTML = `
@@ -65,6 +66,20 @@ const printTasks = (newTarea) => {
 
     tasksContainer.appendChild(newTaskCard);
     vaciar.style.display = "none";
+} else{
+    Toastify({
+
+        text: "La tarea no puede estar vacía",
+        
+        duration: 3000,
+        position: "center", // `left`, `center` or `right`
+        style: {
+            background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+        
+        }).showToast();
+
+}
 }
 
 // menuNav toggle

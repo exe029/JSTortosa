@@ -58,6 +58,64 @@ form {
   cursor: pointer;
   background-color: darkcyan; }
 
+/* line 45, sass/components/form.scss */
+.form-contact {
+  width: 500px;
+  max-width: 100%;
+  margin: auto;
+  margin-top: 30px;
+  padding: 20px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+  position: relative;
+  background-color: white; }
+
+/* line 56, sass/components/form.scss */
+.form-title {
+  text-align: center;
+  margin-top: 0;
+  color: rgba(0, 0, 0, 0.7); }
+
+/* line 63, sass/components/form.scss */
+.form-input, .form-label, .form-submit {
+  display: block;
+  width: 100%;
+  margin-bottom: 40px;
+  font-size: 1.3rem; }
+
+/* line 69, sass/components/form.scss */
+.form-input {
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px; }
+
+/* line 75, sass/components/form.scss */
+.form-input:focus {
+  outline: 1px solid rgba(0, 0, 0, 0.7); }
+
+/* line 78, sass/components/form.scss */
+.form-input:focus + .form-label {
+  margin-top: -140px; }
+
+/* line 84, sass/components/form.scss */
+.form-label {
+  padding-left: 15px;
+  margin-top: -85px;
+  color: rgba(0, 0, 0, 0.5);
+  transition: all 0.2s; }
+
+/* line 90, sass/components/form.scss */
+.form-submit {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none; }
+
+/* line 98, sass/components/form.scss */
+.fijar {
+  margin-top: -135px; }
+
 /* line 1, sass/components/_task.scss */
 .button-delete {
   border: none;
@@ -207,3 +265,15 @@ li p {
   user-select: none;
   border-radius: 20px;
   justify-items: center; }
+
+/* line 76, sass/main.scss */
+.container-papelera {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border-radius: 3px;
+  padding: 30px; }
