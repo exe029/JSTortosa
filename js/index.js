@@ -71,7 +71,7 @@ const printTasks = (newTarea) => {
 
         text: "La tarea no puede estar vacía",
         
-        duration: 3000,
+        duration: 1000,
         position: "center", // `left`, `center` or `right`
         style: {
             background: "linear-gradient(to right, #00b09b, #96c93d)",
