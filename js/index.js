@@ -127,10 +127,6 @@ addButton.addEventListener('click', (e)=>{
     
 });
 
-
-
-
-
 //Ejecuciones inmediatas
 if(localStorage.getItem('tareas')){
     tareas = JSON.parse(localStorage.getItem('tareas')); //de json a objeto literal
