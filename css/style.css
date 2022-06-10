@@ -73,38 +73,40 @@ form {
 .form-title {
   text-align: center;
   margin-top: 0;
+  margin-bottom: 20px;
   color: rgba(0, 0, 0, 0.7); }
 
-/* line 61, sass/components/form.scss */
+/* line 62, sass/components/form.scss */
 .form-input, .form-label, .form-submit {
   display: block;
   width: 100%;
   margin-bottom: 40px;
   font-size: 1.3rem; }
 
-/* line 67, sass/components/form.scss */
+/* line 68, sass/components/form.scss */
 .form-input {
-  padding: 20px;
+  height: 60px;
   border: 1px solid rgba(0, 0, 0, 0.3);
   background: rgba(0, 0, 0, 0.1);
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  transition: all 400ms ease-in-out; }
 
-/* line 73, sass/components/form.scss */
+/* line 75, sass/components/form.scss */
 .form-input:focus {
   outline: 1px solid rgba(0, 0, 0, 0.7); }
 
-/* line 76, sass/components/form.scss */
+/* line 79, sass/components/form.scss */
 .form-input:focus + .form-label {
-  margin-top: -140px; }
+  transform: scale(0.7) translate(-104px, -26px); }
 
-/* line 82, sass/components/form.scss */
+/* line 85, sass/components/form.scss */
 .form-label {
   padding-left: 15px;
   margin-top: -85px;
   color: rgba(0, 0, 0, 0.5);
-  transition: all 0.2s; }
+  transition: all 400ms ease-in-out; }
 
-/* line 88, sass/components/form.scss */
+/* line 91, sass/components/form.scss */
 .form-submit {
   background: rgba(0, 0, 0, 0.7);
   color: white;
@@ -112,9 +114,9 @@ form {
   cursor: pointer;
   border: none; }
 
-/* line 96, sass/components/form.scss */
+/* line 99, sass/components/form.scss */
 .fijar {
-  margin-top: -135px; }
+  transform: scale(0.7) translate(-104px, -26px); }
 
 /* line 1, sass/components/_task.scss */
 .button-delete {
@@ -141,10 +143,17 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #E5E7EB;
   border-radius: 3px;
   height: 30px;
   width: 30px; }
+
+/* line 34, sass/components/_task.scss */
+.check-button--disabled {
+  background-color: #E5E7EB; }
+
+/* line 37, sass/components/_task.scss */
+.check-button--success {
+  background-color: #10b981; }
 
 /* line 1, sass/components/nav.scss */
 #menuNav {

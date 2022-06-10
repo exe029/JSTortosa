@@ -25,11 +25,17 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #E5E7EB;
+      
       border-radius: 3px;
       height: 30px;
       width: 30px;
-      
+  }
+
+  .check-button--disabled{
+    background-color: #E5E7EB;
+  }
+  .check-button--success{
+    background-color: #10b981;
   }
 
   

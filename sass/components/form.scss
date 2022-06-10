@@ -55,6 +55,7 @@ form {
   .form-title{
     text-align: center;
     margin-top: 0;
+    margin-bottom: 20px;
     color: rgba(0,0,0,0.7);
 
   }
@@ -65,16 +66,18 @@ form {
     font-size: 1.3rem;
   }
   .form-input{
-    padding: 20px;
+    height: 60px;
     border: 1px solid rgba(0,0,0,0.3);
     background: rgba(0,0,0,0.1);
     margin-bottom: 40px;
+    transition: all 400ms ease-in-out;
   }
   .form-input:focus{
     outline: 1px solid rgba(0,0,0,0.7);
+    // margin-top:30px;
   }
   .form-input:focus + .form-label{
-    margin-top: -140px;
+    transform: scale(0.7) translate(-104px,-26px);
   }
 
 
@@ -83,7 +86,7 @@ form {
     padding-left: 15px;
     margin-top: -85px;
     color: rgba(0,0,0,0.5);
-    transition: all 0.2s;
+    transition: all 400ms ease-in-out;
   }
   .form-submit{
     background: rgba(0,0,0,0.7);
@@ -94,5 +97,5 @@ form {
   }
 
   .fijar{
-    margin-top: -135px;
+    transform: scale(0.7) translate(-104px,-26px);
   }
