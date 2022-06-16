@@ -2,6 +2,7 @@
 @import './components/form.scss';
 @import './components/task';
 @import './components/nav.scss';
+@import './components/weather.scss';
 
 body {
     
@@ -11,6 +12,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
     background-image: url(https://images.pexels.com/photos/1629212/pexels-photo-1629212.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    
   }
 
   h1 {
@@ -30,7 +32,6 @@ body {
   }
 
   
-
   input {
     padding: 15px 10px;
     outline: none;
@@ -44,8 +45,9 @@ body {
   }
   ul {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     padding: 20px;
+    flex-direction: row;
   }
  
   li p {
