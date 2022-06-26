@@ -1,10 +1,13 @@
+
 #menuNav {
     position: fixed;
-    width: 200px;
+    width: 160px;
     height: 100%;
     background: white;
     left: -200px;
     transition: all 500ms linear;
+    z-index: 999;
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.2);
   }
   
   #menuNav.active {
@@ -24,6 +27,7 @@
     border-radius: 5px;
     margin-top: 15px;
     display: flex;
+    list-style: none;
   }
   
   .logo {

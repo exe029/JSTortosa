@@ -11,7 +11,8 @@ window.addEventListener('load',()=>{
     let responseWeather;
     const iconsObj = {
         "cloudy":'/assets/img/cloud.png',
-        "clear-day":''
+        "clear-day":'',
+        "rain":"/assets/img/icons8-lluvia-48.png"
     } 
 
     //funciones

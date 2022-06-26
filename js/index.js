@@ -17,6 +17,11 @@ const type = document.getElementById('type');
 const addButton = document.getElementById('add-button')
 const tasksContainer = document.getElementById('list-tasks');
 const vaciar = document.querySelector(".vaciar");
+const filter = document.querySelector(".filter");
+const filterOptions = document.querySelectorAll('.filter-option__item');
+
+
+
 
 
 //funciones
@@ -32,24 +37,27 @@ const clearFields = () => {
 }
 
 const deleteTaskById = (e) =>{
-    console.log(e.target.value);
     const id = Number(e.target.value);
     tareas = tareas.filter( el => el.id !== id);
     localStorage.setItem('tareas',JSON.stringify(tareas));
 
     const nodeTareas = document.querySelectorAll('.card-container');
     nodeTareas.forEach( el =>{
-        console.log(el);
         if(el.children[3].children[0].value == id){
-            tasksContainer.removeChild(el)
-        }
-    })
+            tasksContainer.removeChild(el);
+        };
+    });
+    Toastify({
+        text: "La tarea fue eliminada",
+        duration: 1000,
+        position: "center", // `left`, `center` or `right`
+        style: {background: "linear-gradient(to right, #D50505, #441E0A)",},
+        }).showToast();
 };
 const setTaskState = async (e) => {
     const id = e.target.parentNode.value;
     const result = await tareas.find( tarea => tarea.id == id);//el tiempo de ejecución era tan rápido que a veces result tenía undefined en la línea 51
     result.state = !result.state;
-    console.log(e.target.parentNode);
     e.target.parentNode.style.backgroundColor= result.state ? "#10b981" : "#E5E7EB";
     e.target.style.fill = result.state ? "#FFFFFF" : "#9CA3AF";
     localStorage.setItem('tareas',JSON.stringify(tareas))
@@ -78,18 +86,23 @@ const printTasks = (newTarea) => {
 
     tasksContainer.appendChild(newTaskCard);
     vaciar.style.display = "none";
+};
+
+const removeChildrem = (node) => {
+    while(node.lastChild){
+        node.removeChild(node.lastChild);
+    }
 }
 
 // menuNav toggle
 const btnToggle = document.querySelector('.menu-btn');
-
+//eventos
 btnToggle.addEventListener('click', function () {
   console.log('clik')
   document.getElementById('menuNav').classList.toggle('active');
   console.log(document.getElementById('menuNav'))
 });
 
-//eventos
 date.addEventListener('input', (e)=>{
     console.log(e.target.value);
     newTarea.date = e.target.value;
@@ -116,6 +129,12 @@ addButton.addEventListener('click', (e)=>{
         localStorage.setItem('tareas',JSON.stringify(tareas)); //de objeto literal a JSON
         printTasks(newTarea);
         clearFields();
+        Toastify({
+            text: "La tarea se agrego correctamente",
+            duration: 1000,
+            position: "center", // `left`, `center` or `right`
+            style: {background: "linear-gradient(to right, #4BC40B, #8AFA55)",},
+            }).showToast();
     }else{
         Toastify({
             text: "La tarea no puede estar vacía",
@@ -123,9 +142,44 @@ addButton.addEventListener('click', (e)=>{
             position: "center", // `left`, `center` or `right`
             style: {background: "linear-gradient(to right, #D50505, #E78D0C)",},
             }).showToast();
-        console.log('En el else');
     }
     
+});
+
+
+filter.children[0].addEventListener('click',(e)=>{
+    filter.children[1].classList.toggle('active');
+})
+
+filterOptions.forEach( option => {
+    option.addEventListener('click',(e)=>{
+        filter.children[1].classList.toggle('active');
+        removeChildrem(tasksContainer);
+        let tareasFiltradas;
+        switch (e.target.innerHTML) {
+            case "resueltas":
+                tareasFiltradas = tareas.filter(tarea => tarea.state === true);
+                tareasFiltradas.forEach( tarea => {
+                    printTasks(tarea)
+                });
+                break;
+            case "pendientes":
+                tareasFiltradas = tareas.filter(tarea => tarea.state === false);
+                tareasFiltradas.forEach( tarea => {
+                    printTasks(tarea)
+                });
+                break;
+            case "ver todas":
+                tareas.forEach( tarea => {
+                    printTasks(tarea)
+                });
+                break;
+        
+            default:
+                console.error('filtro ingresado no definido')
+                break;
+        }
+    })
 });
 
 //Ejecuciones inmediatas

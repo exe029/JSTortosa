@@ -3,6 +3,7 @@
 @import './components/task';
 @import './components/nav.scss';
 @import './components/weather.scss';
+@import './components/dropdown';
 
 body {
     
@@ -43,7 +44,7 @@ body {
     color: darkslategray;
     margin-top: 20px;
   }
-  ul {
+  #list-tasks{
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
