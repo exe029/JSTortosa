@@ -275,7 +275,7 @@ form {
   /* line 11, sass/components/_dropdown.scss */
   .filter__option {
     width: 120px;
-    opacity: 0;
+    display: none;
     background-color: #FFFFFF;
     position: absolute;
     border: 1px solid rgba(46, 46, 46, 0.299);
@@ -293,7 +293,7 @@ form {
         background-color: rgba(0, 0, 0, 0.106); }
     /* line 29, sass/components/_dropdown.scss */
     .filter__option.active {
-      opacity: 100%; }
+      display: block; }
 
 /* line 8, sass/main.scss */
 body {
