@@ -94,14 +94,8 @@ const removeChildrem = (node) => {
     }
 }
 
-// menuNav toggle
-const btnToggle = document.querySelector('.menu-btn');
+
 //eventos
-btnToggle.addEventListener('click', function () {
-  console.log('clik')
-  document.getElementById('menuNav').classList.toggle('active');
-  console.log(document.getElementById('menuNav'))
-});
 
 date.addEventListener('input', (e)=>{
     console.log(e.target.value);
