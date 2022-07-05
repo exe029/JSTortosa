@@ -9,19 +9,24 @@ form {
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
-
+    
   }
 
   .form-control {
     display: contents;
     margin-top: 10px;
+    
   }
 
   #date {
     width: 70%;
+    border: 1px solid rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.1);
   }
   #description {
     width: 70%;
+    border: 1px solid rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.1);
   }
 
 
@@ -99,4 +104,11 @@ form {
 
   .fijar{
     transform: scale(0.7) translate(-104px,-26px);
+  }
+  #type{
+    height: 30px;
+    border: 1px solid rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.1);
+    ;
+
   }

@@ -3,7 +3,7 @@ window.addEventListener('load',()=>{
     console.log('Inicializando scrip de clima...');
 
     //variables
-    const url = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/cordoba?unitGroup=metric&key=8F3GYEZDMZ5EB5WP2966PFYGA&contentType=json";
+    const url = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/capital%20federal?unitGroup=metric&key=8F3GYEZDMZ5EB5WP2966PFYGA&contentType=json";
     const currentTemp = document.querySelector('.info__temp');
     const currentLocation = document.querySelector('.info__location');
     const iconWeather = document.querySelector('#icon-weather');
@@ -11,9 +11,11 @@ window.addEventListener('load',()=>{
     let responseWeather;
     const iconsObj = {
         "cloudy":'/assets/img/cloud.png',
-        "clear-day":'',
-        "rain":"/assets/img/icons8-lluvia-48.png"
-    } 
+        "clear-day":'/assets/img/outline_wb_sunny_black_24dp.png',
+        "rain":"/assets/img/icons8-lluvia-48.png",
+        "partly-cloudy-day":'/assets/img/cloud-sun-solid.svg',
+        "partly-cloudy-night":'/assets/img/outline_nights_stay_black_24dp.png',
+    }
 
     //funciones
     // const getInfoWeather =  () => {

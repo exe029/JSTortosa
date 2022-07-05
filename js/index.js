@@ -20,10 +20,6 @@ const vaciar = document.querySelector(".vaciar");
 const filter = document.querySelector(".filter");
 const filterOptions = document.querySelectorAll('.filter-option__item');
 
-
-
-
-
 //funciones
 const clearFields = () => {
     description.value="";
@@ -37,7 +33,8 @@ const clearFields = () => {
 }
 
 const deleteTaskById = (e) =>{
-    const id = Number(e.target.value);
+    console.log(e);
+    const id = Number(e.target.parentElement.value);
     tareas = tareas.filter( el => el.id !== id);
     localStorage.setItem('tareas',JSON.stringify(tareas));
 
@@ -61,6 +58,12 @@ const setTaskState = async (e) => {
     e.target.parentNode.style.backgroundColor= result.state ? "#10b981" : "#E5E7EB";
     e.target.style.fill = result.state ? "#FFFFFF" : "#9CA3AF";
     localStorage.setItem('tareas',JSON.stringify(tareas))
+    Toastify({
+        text: "La Tarea esta realizada",
+        duration: 1000,
+        position: "center", // `left`, `center` or `right`
+        style: {background: "linear-gradient(to right, #4BC40B, #8AFA55)",},
+        }).showToast();
 }
 
 const printTasks = (newTarea) => {
@@ -74,7 +77,9 @@ const printTasks = (newTarea) => {
         <span class="card__date">${date}</span>
         <h3>${description}</h3>
         <div class="card__controls">
-            <button class="button-delete" value="${id}"></button>
+            <button class="button-delete" value="${id}">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9zm7.5-5l-1-1h-5l-1 1H5v2h14V4h-3.5z"/></svg>
+            </button>
             <button class="check-button ${ state ? "check-button--success": "check-button--disabled"}" value="${id}">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="${ state ? "#FFFFFF" :"#9CA3AF" }"><path xmlns="http://www.w3.org/2000/svg" d="M10.6 16.6 17.65 9.55 16.25 8.15 10.6 13.8 7.75 10.95 6.35 12.35ZM12 22Q9.925 22 8.1 21.212Q6.275 20.425 4.925 19.075Q3.575 17.725 2.788 15.9Q2 14.075 2 12Q2 9.925 2.788 8.1Q3.575 6.275 4.925 4.925Q6.275 3.575 8.1 2.787Q9.925 2 12 2Q14.075 2 15.9 2.787Q17.725 3.575 19.075 4.925Q20.425 6.275 21.212 8.1Q22 9.925 22 12Q22 14.075 21.212 15.9Q20.425 17.725 19.075 19.075Q17.725 20.425 15.9 21.212Q14.075 22 12 22ZM12 12Q12 12 12 12Q12 12 12 12Q12 12 12 12Q12 12 12 12Q12 12 12 12Q12 12 12 12Q12 12 12 12Q12 12 12 12ZM12 20Q15.325 20 17.663 17.663Q20 15.325 20 12Q20 8.675 17.663 6.337Q15.325 4 12 4Q8.675 4 6.338 6.337Q4 8.675 4 12Q4 15.325 6.338 17.663Q8.675 20 12 20Z"/></svg>
             </button>
@@ -82,8 +87,6 @@ const printTasks = (newTarea) => {
     `
     newTaskCard.children[3].children[0].addEventListener('click', deleteTaskById);
     newTaskCard.children[3].children[1].addEventListener('click', setTaskState);
-    
-
     tasksContainer.appendChild(newTaskCard);
     vaciar.style.display = "none";
 };
