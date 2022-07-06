@@ -15,6 +15,7 @@ window.addEventListener('load',()=>{
         "rain":"../assets/img/icons8-lluvia-48.png",
         "partly-cloudy-day":'../assets/img/cloud-sun-solid.svg',
         "partly-cloudy-night":'../assets/img/outline_nights_stay_black_24dp.png',
+        "fog":'../assets/img/niebla.png',
     }
 
     //funciones

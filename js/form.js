@@ -61,9 +61,12 @@ form.addEventListener('submit', (e)=>{
             }).showToast();
      }else{
        sendEmail( data );
-       e.target[0].value = ""
+       e.target[0].value = "";
+       e.target[1].value = "";
+       e.target[2].value = "";
      }
     
 })
+
 
 
