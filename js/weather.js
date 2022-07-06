@@ -10,12 +10,12 @@ window.addEventListener('load',()=>{
     console.log(currentTemp);
     let responseWeather;
     const iconsObj = {
-        "cloudy":'../assets/img/cloud.png',
-        "clear-day":'../assets/img/outline_wb_sunny_black_24dp.png',
-        "rain":"../assets/img/icons8-lluvia-48.png",
-        "partly-cloudy-day":'../assets/img/cloud-sun-solid.svg',
-        "partly-cloudy-night":'../assets/img/outline_nights_stay_black_24dp.png',
-        "fog":'../assets/img/niebla.png',
+        "cloudy":'./assets/img/cloud.png',
+        "clear-day":'./assets/img/outline_wb_sunny_black_24dp.png',
+        "rain":'./assets/img/icons8-lluvia-48.png',
+        "partly-cloudy-day":'./assets/img/cloud-sun-solid.svg',
+        "partly-cloudy-night":'./assets/img/outline_nights_stay_black_24dp.png',
+        "fog":'./assets/img/niebla.png',
     }
 
     //funciones
