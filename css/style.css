@@ -326,12 +326,11 @@ h3 {
     /* line 21, sass/components/_dropdown.scss */
     .filter__option .filter-option__item {
       padding: 10px 16px;
-      cursor: pointer;
-      text-transform: capitalize; }
-      /* line 25, sass/components/_dropdown.scss */
+      cursor: pointer; }
+      /* line 24, sass/components/_dropdown.scss */
       .filter__option .filter-option__item:hover {
-        background-color: rgba(0, 0, 0, 0.106); }
-    /* line 29, sass/components/_dropdown.scss */
+        background-color: rgba(0, 0, 0, 0.105); }
+    /* line 28, sass/components/_dropdown.scss */
     .filter__option.active {
       display: block; }
 
