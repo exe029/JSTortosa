@@ -199,7 +199,7 @@ h3 {
   position: fixed;
   width: 160px;
   height: 100%;
-  background: white;
+  background: #E8BDE9;
   left: -200px;
   transition: all 500ms linear;
   z-index: 999;
@@ -249,7 +249,7 @@ h3 {
   width: 40px;
   text-align: center;
   font-size: 25px;
-  background-color: #ef63e6; }
+  background-color: #D8A2D9; }
 
 /* line 56, sass/components/nav.scss */
 #menuNav .menu-btn:hover {

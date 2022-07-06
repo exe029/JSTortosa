@@ -58,12 +58,22 @@ const setTaskState = async (e) => {
     e.target.parentNode.style.backgroundColor= result.state ? "#10b981" : "#E5E7EB";
     e.target.style.fill = result.state ? "#FFFFFF" : "#9CA3AF";
     localStorage.setItem('tareas',JSON.stringify(tareas))
-    Toastify({
-        text: "La Tarea esta realizada",
-        duration: 1000,
-        position: "center", // `left`, `center` or `right`
-        style: {background: "linear-gradient(to right, #4BC40B, #8AFA55)",},
-        }).showToast();
+    if(result.state){
+        Toastify({
+            text: "La Tarea esta realizada",
+            duration: 1000,
+            position: "center", // `left`, `center` or `right`
+            style: {background: "linear-gradient(to right, #0FBD29, #92B511)",},
+            }).showToast(); 
+       }else{
+        Toastify({
+            text: "La Tarea esta Pendiente",
+            duration: 1000,
+            position: "center", // `left`, `center` or `right`
+            style: {background: "linear-gradient(to right, #2AB1A3, #7FEDE1)",},
+            }).showToast();
+       }
+    
 }
 
 const printTasks = (newTarea) => {
@@ -127,14 +137,14 @@ addButton.addEventListener('click', (e)=>{
         printTasks(newTarea);
         clearFields();
         Toastify({
-            text: "La tarea se agrego correctamente",
+            text: "La Tarea se agrego correctamente",
             duration: 1000,
             position: "center", // `left`, `center` or `right`
             style: {background: "linear-gradient(to right, #4BC40B, #8AFA55)",},
             }).showToast();
     }else{
         Toastify({
-            text: "La tarea no puede estar vacía",
+            text: "La Tarea no puede estar vacía",
             duration: 1000,
             position: "center", // `left`, `center` or `right`
             style: {background: "linear-gradient(to right, #D50505, #E78D0C)",},
