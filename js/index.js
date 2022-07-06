@@ -70,7 +70,7 @@ const setTaskState = async (e) => {
             text: "La Tarea esta Pendiente",
             duration: 1000,
             position: "center", // `left`, `center` or `right`
-            style: {background: "linear-gradient(to right, #2AB1A3, #7FEDE1)",},
+            style: {background: "linear-gradient(to right, #8B8B90, #9898A0)",},
             }).showToast();
        }
     
