@@ -249,9 +249,10 @@ h3 {
   width: 40px;
   text-align: center;
   font-size: 25px;
-  background-color: #D8A2D9; }
+  background-color: #D8A2D9;
+  border-radius: 20px; }
 
-/* line 56, sass/components/nav.scss */
+/* line 57, sass/components/nav.scss */
 #menuNav .menu-btn:hover {
   cursor: pointer; }
 
