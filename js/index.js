@@ -176,7 +176,7 @@ filterOptions.forEach( option => {
                     printTasks(tarea)
                 });
                 break;
-            case "ver todas las tareas":
+            case "ver todas":
                 tareas.forEach( tarea => {
                     printTasks(tarea)
                 });
