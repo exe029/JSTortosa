@@ -183,12 +183,12 @@ filterOptions.forEach( option => {
                 break;
         
             default:
-                console.error('filtro ingresado no definido')
+                console.error(`filtro ingresado: ${e.target.innerHTML} no definido`)
                 break;
         }
     })
 });
-
+//console.error('filtro ingresado no definido')
 //Ejecuciones inmediatas
 if(localStorage.getItem('tareas')){
     tareas = JSON.parse(localStorage.getItem('tareas')); //de json a objeto literal
