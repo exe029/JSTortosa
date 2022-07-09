@@ -19,9 +19,7 @@ window.addEventListener('load',()=>{
     }
 
     //funciones
-    // const getInfoWeather =  () => {
-
-    // }
+   
     const printTemp = () =>{
         console.log(currentTemp.children[0],currentLocation.children[1]);
         currentTemp.children[0].innerHTML = `${responseWeather.currentConditions.temp}°`;
