@@ -4,7 +4,6 @@
  })();
 
 const form = document.querySelector('.form-contact');
-console.log(form);
 
 //fijar placeholder en la parte superior del input
 var inputs = document.getElementsByClassName('form-input');

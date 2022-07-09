@@ -195,5 +195,4 @@ if(localStorage.getItem('tareas')){
     tareas.forEach( tarea => {
         printTasks(tarea)
     });
-    console.log('hay tareas')
 }
